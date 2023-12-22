@@ -1,0 +1,660 @@
+  .App {
+  text-align: center;
+}
+body {
+  padding: 0%;
+  margin: 0%;
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url('/public/backgroundimage.jpg'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-position: center center;
+  color: black; 
+}
+
+
+nav {
+  margin: 0;
+  width: 100%;
+  height: 80px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  margin: 10px;
+  font-size: 25px;
+}
+
+.createPostPage {
+  width: 100%;
+  height: calc(100vh - 80px);
+  display: grid;
+  place-items: center;
+}
+
+.cpContainer {
+  width: 600px;
+  height: auto;
+  padding: 50px;
+  background-color: rgb(250, 250, 250, 0.8);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 12px;
+  color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+}
+
+.cpContainer h1 {
+  text-align: center;
+}
+
+.cpContainer label {
+  font-size: 25px;
+}
+.cpContainer .inputGp {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputGp input,
+.inputGp textarea {
+  font-size: 18px;
+  border: black solid 3px;
+  border-radius: 2px;
+  padding: 5px;
+}
+
+.inputGp input {
+  height: 40px;
+}
+.inputGp textarea {
+  height: 150px;
+}
+
+.cpContainer button {
+  background-color:  #007bff;;
+  margin-top: 20px;
+  height: 40px;
+  border: black solid 3px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+}
+input,
+textarea {
+  margin-top: 5px;
+}
+
+.loginPage {
+  width: 100vw;
+  height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginPage p {
+  font-size: 30px;
+}
+
+/* GOOGLE BUTTOn */
+.login-with-google-btn {
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  padding: 5px 16px 12px 42px;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04), 0 1px 1px rgba(0, 0, 0, 0.25);
+  color: #757575;
+  font-size: 25px;
+  font-weight: 500;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNMTcuNiA5LjJsLS4xLTEuOEg5djMuNGg0LjhDMTMuNiAxMiAxMyAxMyAxMiAxMy42djIuMmgzYTguOCA4LjggMCAwIDAgMi42LTYuNnoiIGZpbGw9IiM0Mjg1RjQiIGZpbGwtcnVsZT0ibm9uemVybyIvPjxwYXRoIGQ9Ik05IDE4YzIuNCAwIDQuNS0uOCA2LTIuMmwtMy0yLjJhNS40IDUuNCAwIDAgMS04LTIuOUgxVjEzYTkgOSAwIDAgMCA4IDV6IiBmaWxsPSIjMzRBODUzIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNNCAxMC43YTUuNCA1LjQgMCAwIDEgMC0zLjRWNUgxYTkgOSAwIDAgMCAwIDhsMy0yLjN6IiBmaWxsPSIjRkJCQzA1IiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNOSAzLjZjMS4zIDAgMi41LjQgMy40IDEuM0wxNSAyLjNBOSA5IDAgMCAwIDEgNWwzIDIuNGE1LjQgNS40IDAgMCAxIDUtMy43eiIgZmlsbD0iI0VBNDMzNSIgZmlsbC1ydWxlPSJub256ZXJvIi8+PHBhdGggZD0iTTAgMGgxOHYxOEgweiIvPjwvZz48L3N2Zz4=);
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: 12px 11px;
+}
+.login-with-google-btn:hover {
+  box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+.login-with-google-btn:active {
+  background-color: #eeeeee;
+}
+.login-with-google-btn:focus {
+  outline: none;
+  box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.25),
+    0 0 0 3px #c8dafc;
+}
+.login-with-google-btn:disabled {
+  filter: grayscale(100%);
+  background-color: #ebebeb;
+  box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04), 0 1px 1px rgba(0, 0, 0, 0.25);
+  cursor: not-allowed;
+}
+
+.homePage {
+  width: 100%;
+  min-height: calc(100vh - 80px);
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.homePage .post {
+  width: 800px;
+  background-color: rgb(250, 250, 250, 0.8);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.post .postHeader {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.postHeader .title {
+  flex: 50%;
+}
+.postHeader .deletePost {
+  flex: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.deletePost button {
+  border: none;
+
+  background: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.post .postTextContainer {
+  word-wrap: break-word;
+  border-top: black solid 2px;
+  border-bottom: black solid 2px;
+  height: auto;
+  max-height: 400px;
+  width: 90%;
+  overflow: hidden;
+  overflow-y: auto;
+  margin: 5%;
+  padding: 5%;
+}
+
+.post img {
+  border: black 3px solid;
+  max-width: 100%; 
+  border-radius: 2%;
+  height: auto; 
+  margin: 1%;
+}
+
+
+.post video {
+  border: black 3px solid;
+  border-radius: 2%;
+  max-width: 100%; 
+  height: auto; 
+  margin: 1%;
+}
+
+
+.post .lkk { 
+  border-radius: 5%;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+  margin: 1%;
+  padding: 1%;
+  display: inline-block; 
+  word-wrap: break-word; 
+  text-align: center;
+
+}
+
+
+.post embed {
+  border: black 3px solid;
+  border-radius: 2%;
+  margin: 1%;
+}
+
+.post audio {
+  border-radius: 2%;
+  margin: 2%;
+}
+
+.sih { 
+  color: white;
+  background-color: black;
+  padding: 1%;
+  border-radius: 7%;
+}
+
+
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: black; 
+  z-index: 100; 
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: background-color 0.3s;
+}
+
+
+.actions2 {
+  display: flex;
+  align-items: center;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin: 10px;
+}
+
+.actions button {
+  
+  padding: 10px;
+  margin: 10px;
+}
+
+.deletebtn,
+.editbtn {
+  background-color: #dc3545; /* couleur de fond rouge pour le bouton de suppression */
+  color: #fff; /* couleur du texte blanc */
+  border: none;
+  padding: 8px 16px;
+  margin-right: 8px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.editbtn a {
+  text-decoration: none;
+  color: #fff; /* couleur du texte blanc pour le lien du bouton d'édition */
+}
+
+.deletebtn:hover{
+  background-color: #3b00fe; /* couleur de fond rouge plus foncé au survol */
+}
+
+
+.editbtn:hover {
+  background-color: #3aa209; /* couleur de fond rouge plus foncé au survol */
+}
+
+
+.editArticlePage {
+  padding: 20px;
+  border-radius: 15px;
+  background-color: rgb(250, 250, 250, 0.8);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  max-width: 800px;
+  margin: 0 auto  ;
+  padding: 40px;
+  width: 1000px;
+}
+
+.editArticlePage h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333; 
+}
+
+.editArticlePage .inputGp {
+  margin-bottom: 20px;
+}
+
+.editArticlePage .inputGp label {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #666; 
+}
+
+.editArticlePage input, textarea {
+  width: 100%;
+  padding: 5px;
+  font-size: 18px;
+  background-color: rgb(250, 250, 250, 0.8);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  margin: 2%;
+}
+
+.editArticlePage input{
+height: 40px;
+}
+
+.editArticlePage textarea {
+  height: 400px;  
+  word-wrap: break-word;
+}
+
+.editArticlePage button {
+  background-color: #007bff; 
+  color: white; 
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.editArticlePage button:hover {
+  background-color: #0056b3; 
+}
+
+
+.editArticlePage .mediaLinks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+}
+
+.editArticlePage .mediaLinks > div {
+  text-align: center; 
+  margin: 10px;
+}
+
+.editArticlePage .mediaLinks img,
+.editArticlePage .mediaLinks video,
+.editArticlePage .mediaLinks audio,
+.editArticlePage .mediaLinks embed {
+  max-width: 100%;
+  max-height: 400px; 
+  border: 3px solid black;
+  border-radius: 2%;
+  margin: 10px; 
+}
+
+.editArticlePage .mediaLinks .lkk {
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+  margin: 1%;
+  padding: 1%;
+  display: inline-block; 
+  word-wrap: break-word; 
+}
+
+/* Style du bouton "Log Out" */
+nav button {
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+nav button:hover {
+  background-color: #d9534f;
+}
+
+
+nav button:focus {
+  outline: none;
+  box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.25), 0 0 0 3px #c8dafc;
+}
+
+
+nav button:disabled {
+  filter: grayscale(100%);
+  background-color: #ebebeb;
+  cursor: not-allowed;
+}
+
+
+
+
+/* Styles for comments section */
+.comments {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.comment {
+  background-color: rgb(250, 250, 250, 0.8);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.comment strong {
+  color: #007bff;
+}
+
+.add-comment {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.add-comment input,
+.add-comment textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.add-comment button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-comment button:hover {
+  background-color: #0056b3;
+}
+
+
+.delete-comment2 {
+  margin-left: 700px;
+ 
+
+}
+
+.delete-comment2 button {
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: #3498db;
+  font-size: 16px;
+  transition: color 0.3s ease-in-out;
+  border: black 1px solid;
+  border-radius: 20%;
+}
+
+.delete-comment2 button:hover {
+  color: #000000;
+  background-color: red;
+  border-radius: 40%;
+  transition: 1s;
+}
+
+
+
+.show-more-button {
+  background-color: #3498db; 
+  color: #ffffff; 
+  padding: 8px 12px; 
+  border: none; 
+  border-radius: 4px; 
+  cursor: pointer; 
+  margin-top: 8px; 
+}
+
+.show-more-button:hover {
+  background-color: #0e4265; 
+  transition: 1s;
+}
+
+.show-less-button {
+  background-color: #e74c3c; 
+  color: #ffffff; 
+  padding: 8px 12px; 
+  border: none; 
+  border-radius: 4px; 
+  cursor: pointer; 
+  margin-top: 8px;  
+}
+
+.show-less-button:hover {
+  background-color: rgb(102, 6, 6);
+  transition: 1s;
+}
+
+
+.kallab {
+  width: 50%;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding-left: 40px; 
+}
+
+.inputGp select {
+  width: 100%;
+  padding: 5px;
+  font-size: 18px;
+  background-color: rgb(250, 250, 250, 0.8);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  margin: 2%;
+  height: 40px;
+}
+
+
+.categoryButtons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.categoryButtons button {
+  margin: 5px;
+  padding: 10px;
+  border: 3px solid #95a5a6; /* Couleur de la bordure */
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.categoryButtons button:nth-child(odd) {
+  background-color: #bdc3c7; /* Couleur pour les boutons impairs */
+  color: #34495e; /* Couleur du texte pour les boutons impairs */
+}
+
+.categoryButtons button:nth-child(even) {
+  background-color: #ecf0f1; /* Couleur pour les boutons pairs */
+  color: #2c3e50; /* Couleur du texte pour les boutons pairs */
+}
+
+.categoryButtons button:hover {
+  background-color: #dfe6e9; /* Nouvelle couleur au survol */
+  color: #ffffff; /* Changement de couleur du texte au survol */
+  border-color: #ffffff; /* Changement de couleur de la bordure au survol */
+  transform: scale(1.05); /* Effet d'agrandissement au survol */
+}
+
+
+/* CSS pour la barre d'outils de l'éditeur de texte */
+.ql-toolbar {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+}
+
+.ql-container {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  min-height: 200px;
+}
+
+
+/* CSS pour les boutons de la barre d'outils */
+.ql-toolbar button {
+  color: #333;
+  border: none;
+  background-color: #f8f8f8;
+  padding: 8px 10px;
+  margin: 2px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.ql-toolbar button:hover {
+  background-color: #e0e0e0;
+}
+
+
+.WLCM {
+  color: red;
+}
+.WLCM:hover {
+  color: red;
+  background-color: blue;
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(-100%); /* Commence en dehors de l'écran à droite */
+  }
+  100% {
+    transform: translateX(100%); /* Termine en dehors de l'écran à gauche */
+  }
+}
+
+.WLCM {
+  animation: scrollLeft 6s linear infinite; /* Ajustez la durée et la vitesse au besoin */
+}
